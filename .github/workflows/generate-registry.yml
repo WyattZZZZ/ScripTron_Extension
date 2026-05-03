@@ -1,0 +1,42 @@
+name: Generate Registry
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - 'clis.json'
+      - 'models.json'
+      - 'skills.json'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run generation script
+        run: python scripts/generate_registry.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add clis.json models.json skills.json
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-generate registry JSONs"
+            git push
+          fi
