@@ -1,0 +1,28 @@
+{
+  "name": "vercel",
+  "kind": "tool",
+  "description": "Official Vercel CLI. Deploy projects, manage domains, environment variables, and logs with OAuth browser login.",
+  "version": "0.1.0",
+  "command": "./run.sh",
+  "author": "Vercel",
+  "homepage": "https://vercel.com/docs/cli",
+  "args_schema": [
+    {
+      "name": "action",
+      "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a vercel command.",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "description": "The vercel sub-command to run (only required if action is 'run').",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "examples": [
+    "vercel --action login",
+    "vercel --action run --input \"deploy\"",
+    "vercel --action run --input \"ls\""
+  ]
+}

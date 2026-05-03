@@ -1,0 +1,27 @@
+{
+  "name": "qwen-code",
+  "kind": "model",
+  "description": "Alibaba Qwen (通义千问) Code model provider with graphical OAuth login support.",
+  "version": "0.1.0",
+  "command": "./run.sh",
+  "author": "ScripTron",
+  "homepage": "https://example.com/qwen-code",
+  "args_schema": [
+    {
+      "name": "action",
+      "description": "Action to perform: 'login' for OAuth authentication, 'chat' for model inference.",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "prompt",
+      "description": "Prompt to send to the model (only required if action is 'chat').",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "examples": [
+    "qwen-code --action login",
+    "qwen-code --action chat --prompt \"Write a python function\""
+  ]
+}

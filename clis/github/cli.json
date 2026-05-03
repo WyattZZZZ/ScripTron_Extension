@@ -1,0 +1,28 @@
+{
+  "name": "github",
+  "kind": "tool",
+  "description": "Official GitHub CLI (gh). Manage repos, PRs, issues, and workflows with OAuth browser login.",
+  "version": "0.1.0",
+  "command": "./run.sh",
+  "author": "GitHub",
+  "homepage": "https://cli.github.com/",
+  "args_schema": [
+    {
+      "name": "action",
+      "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a gh command.",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "description": "The gh sub-command to run (only required if action is 'run').",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "examples": [
+    "github --action login",
+    "github --action run --input \"pr list\"",
+    "github --action run --input \"issue create --title 'Bug' --body 'Details'\""
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "feishu",
+  "kind": "tool",
+  "description": "Official Feishu (Lark) CLI by Larksuite. Manage Feishu messages, calendars, docs and more with OAuth browser login.",
+  "version": "0.1.0",
+  "command": "./run.sh",
+  "author": "Larksuite",
+  "homepage": "https://open.feishu.cn/",
+  "args_schema": [
+    {
+      "name": "action",
+      "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a lark-cli command.",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "description": "The lark-cli sub-command to run (only required if action is 'run').",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "examples": [
+    "feishu --action login",
+    "feishu --action run --input \"message send --chat-id xxx --text 'Hello'\""
+  ]
+}

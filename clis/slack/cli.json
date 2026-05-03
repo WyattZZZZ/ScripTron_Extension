@@ -1,0 +1,28 @@
+{
+  "name": "slack",
+  "kind": "tool",
+  "description": "Official Slack CLI. Create and manage Slack apps, run local development, and deploy with OAuth browser login.",
+  "version": "0.1.0",
+  "command": "./run.sh",
+  "author": "Slack",
+  "homepage": "https://tools.slack.dev/slack-cli/",
+  "args_schema": [
+    {
+      "name": "action",
+      "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a slack command.",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "description": "The slack sub-command to run (only required if action is 'run').",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "examples": [
+    "slack --action login",
+    "slack --action run --input \"app list\"",
+    "slack --action run --input \"deploy\""
+  ]
+}
