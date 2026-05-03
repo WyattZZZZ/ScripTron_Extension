@@ -1,0 +1,113 @@
+[
+  {
+    "name": "example-model",
+    "kind": "model",
+    "description": "An example ScripTron model provider template.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "Your Name",
+    "homepage": "https://example.com/example-model",
+    "args_schema": [
+      {
+        "name": "prompt",
+        "description": "Prompt to send to the model.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "temperature",
+        "description": "Model temperature.",
+        "required": false,
+        "type": "number"
+      }
+    ],
+    "examples": [
+      "example-model --prompt \"What is the capital of France?\" --temperature 0.7"
+    ],
+    "repository_path": "models/example-model"
+  },
+  {
+    "name": "qwen-code",
+    "kind": "model",
+    "description": "Alibaba Qwen (通义千问) Code model provider with graphical OAuth login support.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "ScripTron",
+    "homepage": "https://example.com/qwen-code",
+    "args_schema": [
+      {
+        "name": "action",
+        "description": "Action to perform: 'login' for OAuth authentication, 'chat' for model inference.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "prompt",
+        "description": "Prompt to send to the model (only required if action is 'chat').",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "examples": [
+      "qwen-code --action login",
+      "qwen-code --action chat --prompt \"Write a python function\""
+    ],
+    "repository_path": "models/qwen-code"
+  },
+  {
+    "name": "gemini-code",
+    "kind": "model",
+    "description": "Google Gemini Code model provider with graphical OAuth login support.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "ScripTron",
+    "homepage": "https://example.com/gemini-code",
+    "args_schema": [
+      {
+        "name": "action",
+        "description": "Action to perform: 'login' for OAuth authentication, 'chat' for model inference.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "prompt",
+        "description": "Prompt to send to the model (only required if action is 'chat').",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "examples": [
+      "gemini-code --action login",
+      "gemini-code --action chat --prompt \"Write a python function\""
+    ],
+    "repository_path": "models/gemini-code"
+  },
+  {
+    "name": "codex",
+    "kind": "model",
+    "description": "OpenAI Codex model provider with graphical OAuth login support.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "ScripTron",
+    "homepage": "https://example.com/codex",
+    "args_schema": [
+      {
+        "name": "action",
+        "description": "Action to perform: 'login' for OAuth authentication, 'chat' for model inference.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "prompt",
+        "description": "Prompt to send to the model (only required if action is 'chat').",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "examples": [
+      "codex --action login",
+      "codex --action chat --prompt \"Write a python function\""
+    ],
+    "repository_path": "models/codex"
+  }
+]

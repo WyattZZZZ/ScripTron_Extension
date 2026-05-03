@@ -1,0 +1,144 @@
+[
+  {
+    "name": "feishu",
+    "kind": "tool",
+    "description": "Official Feishu (Lark) CLI by Larksuite. Manage Feishu messages, calendars, docs and more with OAuth browser login.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "Larksuite",
+    "homepage": "https://open.feishu.cn/",
+    "args_schema": [
+      {
+        "name": "action",
+        "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a lark-cli command.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "input",
+        "description": "The lark-cli sub-command to run (only required if action is 'run').",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "examples": [
+      "feishu --action login",
+      "feishu --action run --input \"message send --chat-id xxx --text 'Hello'\""
+    ],
+    "repository_path": "clis/feishu"
+  },
+  {
+    "name": "vercel",
+    "kind": "tool",
+    "description": "Official Vercel CLI. Deploy projects, manage domains, environment variables, and logs with OAuth browser login.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "Vercel",
+    "homepage": "https://vercel.com/docs/cli",
+    "args_schema": [
+      {
+        "name": "action",
+        "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a vercel command.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "input",
+        "description": "The vercel sub-command to run (only required if action is 'run').",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "examples": [
+      "vercel --action login",
+      "vercel --action run --input \"deploy\"",
+      "vercel --action run --input \"ls\""
+    ],
+    "repository_path": "clis/vercel"
+  },
+  {
+    "name": "github",
+    "kind": "tool",
+    "description": "Official GitHub CLI (gh). Manage repos, PRs, issues, and workflows with OAuth browser login.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "GitHub",
+    "homepage": "https://cli.github.com/",
+    "args_schema": [
+      {
+        "name": "action",
+        "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a gh command.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "input",
+        "description": "The gh sub-command to run (only required if action is 'run').",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "examples": [
+      "github --action login",
+      "github --action run --input \"pr list\"",
+      "github --action run --input \"issue create --title 'Bug' --body 'Details'\""
+    ],
+    "repository_path": "clis/github"
+  },
+  {
+    "name": "example-cli",
+    "kind": "tool",
+    "description": "An example ScripTron CLI tool template.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "Your Name",
+    "homepage": "https://example.com/example-cli",
+    "args_schema": [
+      {
+        "name": "input",
+        "description": "Input text to process.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "verbose",
+        "description": "Enable verbose output.",
+        "required": false,
+        "type": "boolean"
+      }
+    ],
+    "examples": [
+      "example-cli --input \"Hello World\" --verbose"
+    ],
+    "repository_path": "clis/example-cli"
+  },
+  {
+    "name": "slack",
+    "kind": "tool",
+    "description": "Official Slack CLI. Create and manage Slack apps, run local development, and deploy with OAuth browser login.",
+    "version": "0.1.0",
+    "command": "./run.sh",
+    "author": "Slack",
+    "homepage": "https://tools.slack.dev/slack-cli/",
+    "args_schema": [
+      {
+        "name": "action",
+        "description": "Action to perform: 'login' for OAuth browser authentication, 'run' to execute a slack command.",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "input",
+        "description": "The slack sub-command to run (only required if action is 'run').",
+        "required": false,
+        "type": "string"
+      }
+    ],
+    "examples": [
+      "slack --action login",
+      "slack --action run --input \"app list\"",
+      "slack --action run --input \"deploy\""
+    ],
+    "repository_path": "clis/slack"
+  }
+]

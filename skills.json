@@ -1,0 +1,21 @@
+[
+  {
+    "name": "example-skill",
+    "kind": "skill",
+    "description": "An example ScripTron skill that uses example-cli and example-model.",
+    "version": "0.1.0",
+    "author": "Your Name",
+    "homepage": "https://example.com/example-skill",
+    "entry": "SKILL.md",
+    "tags": [
+      "example",
+      "demo"
+    ],
+    "requires": {
+      "clis": [
+        "example-cli"
+      ]
+    },
+    "repository_path": "skills/example-skill"
+  }
+]
